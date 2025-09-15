@@ -3,6 +3,7 @@ import ZuuwHeader from "@/components/ZuuwHeader";
 import About from "@/components/About";
 import CarouselApps from "@/components/CarouselApps";
 import Header from "@/components/Header";
+import ContactForm from "@/components/ContactForm";
 
 
 export default function Home() {
@@ -24,7 +25,7 @@ export default function Home() {
    </section>
             {/* !!4TH PAGE!! CONTACT ME  */}
    <section class="page">
-
+    <ContactForm />
    </section>
    </div>
   );

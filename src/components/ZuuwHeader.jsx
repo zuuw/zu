@@ -10,9 +10,9 @@ function ZuuwHeader() {
         <div className='relative'>
         <TypeAnimation 
             sequence={[
-                '<h1></h1>',
+                'zuuw',
                 1000,
-                '<h1>zuuw</h1>',
+                'Cody Mcleod',
                 1000,
                 'zuuw.',
                 1000
