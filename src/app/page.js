@@ -11,7 +11,7 @@ export default function Home() {
    <div class="container">
     {/* !!FIRST PAGE!! HEADER */}
    <section class="page">
-    <Header />
+    {/* <Header /> */}
      <ZuuwHeader />
 
    </section>
