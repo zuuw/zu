@@ -24,7 +24,7 @@ export default function Home() {
    </section>
             {/* !!4TH PAGE!! CONTACT ME  */}
    <section class="page">
-
+    <h1>Form for Contact!!</h1>
    </section>
    </div>
   );
