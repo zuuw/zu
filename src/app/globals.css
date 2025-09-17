@@ -20,6 +20,11 @@
 }
 
 body {
+  /* background-image: url('/public/cherry-bgg.png'); */
+    /* background-size: 1920px 1080px;  */
+    /* background-color: white; */
+    /* background-repeat: no-repeat; */
+    /* image-rendering: pixelated; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -33,6 +38,7 @@ body {
   height: 100vh;
   overflow-y:scroll ;
   scroll-snap-type: y mandatory;
+  
 }
 
 .page {
@@ -73,7 +79,7 @@ body {
 }
 
 .contact-left-title h2 {
-  color: rgb(113, 116, 133);
+  color: rgb(255, 255, 255);
   font-size: 40px;
   font-weight: 600;
   margin-bottom: 5px;

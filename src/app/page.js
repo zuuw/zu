@@ -8,23 +8,23 @@ import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
   return (
-   <div class="container">
+   <div className="container">
     {/* !!FIRST PAGE!! HEADER */}
-   <section class="page">
+   <section className="page">
     {/* <Header /> */}
      <ZuuwHeader />
 
    </section>
             {/* !!SECOND PAGE!! ABOUT ME */}
-   <section class="page" className="flex flex-col justify-center items-center">
+   <section className="page">
       <About />
    </section>
 {/* !!THIRD PAGE!! PROJECTS */}
-   <section class="page">
+   {/* <section class="page">
     <CarouselApps />
-   </section>
+   </section> */}
             {/* !!4TH PAGE!! CONTACT ME  */}
-   <section class="page">
+   <section className="page">
 
     <ContactForm />
 
