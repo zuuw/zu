@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import SkillBar from "./Skillbar";
-import CarouselApps from "./CarouselApps";
+
 
 
 export default function About() {
@@ -31,7 +31,7 @@ export default function About() {
       <div className="w-28 h-28 rounded-full bg-gray-300 sm:hidden"></div>
         {/* About text */}
         <div>
-          <h2 className="text-white text-3xl font-bold mb-2">About Me</h2>
+          <h2 id="aboutme" className="text-white text-3xl font-bold mb-2">About Me</h2>
           <p className="text-gray-300 mb-3">
             Hello, I'm Cody Mcleod aka "zuuw" on the internet. I am a 23 year old who has been coding since the summer of '24. Before I was coding I worked
             as an electrical apprentice doing commercial and industrial work.

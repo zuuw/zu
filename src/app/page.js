@@ -4,11 +4,21 @@ import About from "@/components/About";
 import CarouselApps from "@/components/CarouselApps";
 import Header from "@/components/Header";
 import ContactForm from "@/components/ContactForm";
-
+import Image from "next/image";
 
 export default function Home() {
   return (
    <div className="container">
+      <Image
+                src="/cherry-bgg.png"
+                alt="Background"
+                layout="fill"
+                objectFit="cover"
+                style={{imageRendering: "pixelated"}}
+                quality={100}
+                className="mx-0 z-[-1] absolute"
+
+              />
     {/* !!FIRST PAGE!! HEADER */}
    <section className="page">
     {/* <Header /> */}
