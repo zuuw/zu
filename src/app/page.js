@@ -19,6 +19,19 @@ export default function Home() {
                 className="mx-0 z-[-1] absolute"
 
               />
+
+              <Image
+                src="/trppy-bg.png"
+                alt="Background"
+                layout="fill"
+                objectFit="cover"
+                style={{imageRendering: "pixelated"}}
+                quality={100}
+                className="mx-0 z-[-20] absolute"
+
+              />
+
+
     {/* !!FIRST PAGE!! HEADER */}
    <section className="page">
     {/* <Header /> */}
