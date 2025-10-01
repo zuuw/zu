@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import SkillBar from "./Skillbar";
-
+import Tilt from "react-parallax-tilt";
 
 
 export default function About() {
@@ -12,6 +12,7 @@ export default function About() {
       className="h-screen grid md:grid-cols-2 items-center px-6 md:px-20"
     >
       {/* About Card */}
+      <Tilt>
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -43,7 +44,7 @@ export default function About() {
           </ul>
         </div>
       </motion.div>
-
+</Tilt>
       {/* Skills */}
       <motion.div
         initial={{ opacity: 0, x: 50 }}

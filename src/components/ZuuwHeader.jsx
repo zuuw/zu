@@ -10,12 +10,9 @@ function ZuuwHeader() {
         <div className='flex m-0'>
         <TypeAnimation 
             sequence={[
+              1000,
                 'zuuw',
                 1000,
-                'Cody Mcleod',
-                1000,
-                'zuuw.',
-                1000
             ]}
         
             wrapper='h1'
