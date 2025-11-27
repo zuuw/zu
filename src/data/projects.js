@@ -5,7 +5,7 @@ const projects = [
     title: "Pixel Art Site",
     href: "/projects/pixelart",
     description: "A site I made with Vanilla HTML and CSS! All the pixel art was done by myself in Aseprite!",
-    imageSrc: "/pixelart0.png",
+    imageSrc: "projects/pixelart0.png",
     images: [
       "/projects/pixel1.png",
       "/projects/pixel2.png"
