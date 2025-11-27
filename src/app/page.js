@@ -1,57 +1,21 @@
-
-import ZuuwHeader from "@/components/ZuuwHeader";
 import About from "@/components/About";
-import CarouselApps from "@/components/CarouselApps";
-import Header from "@/components/Header";
 import ContactForm from "@/components/ContactForm";
-import Image from "next/image";
+import ProjectCard from "@/components/ProjectCard";
+import ZuuwHeader from "@/components/ZuuwHeader";
 
+import projects from "@/data/projects";
 export default function Home() {
   return (
-   <div className="container">
-      <Image
-                src="/cherry-bgg.png"
-                alt="Background"
-                layout="fill"
-                objectFit="cover"
-                style={{imageRendering: "pixelated"}}
-                quality={100}
-                className="mx-0 z-[-1] absolute"
-
-              />
-
-              <Image
-                src="/trppy-bg.png"
-                alt="Background"
-                layout="fill"
-                objectFit="cover"
-                style={{imageRendering: "pixelated"}}
-                quality={100}
-                className="mx-0 z-[-20] absolute"
-
-              />
-
-
-    {/* !!FIRST PAGE!! HEADER */}
-   <section className="page">
-    {/* <Header /> */}
-     <ZuuwHeader />
-
-   </section>
-            {/* !!SECOND PAGE!! ABOUT ME */}
-   <section className="page">
-      <About />
-   </section>
-{/* !!THIRD PAGE!! PROJECTS */}
-   {/* <section class="page">
-    <CarouselApps />
-   </section> */}
-            {/* !!4TH PAGE!! CONTACT ME  */}
-   <section className="page">
-
-    <ContactForm />
-
-   </section>
-   </div>
+    <div className="h-screen w-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth">
+      {/* your sections */}
+      <section id="home" className="page"><ZuuwHeader /></section>
+      <section id="aboutme" className="page"><About /></section>
+      <section id="projects" className="page flex gap-6 overflow-x-auto no-scrollbar py-10 px-4">
+{projects.map((project, idx) => (
+<ProjectCard key={idx} {...project} />
+))}
+</section>
+      <section id="contact" className="page"><ContactForm /></section>
+    </div>
   );
 }
