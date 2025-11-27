@@ -13,7 +13,7 @@ export default function SkillBar({ skill, level }) {
           whileInView={{ width: `${level}%` }}
           transition={{ duration: 1.5 }}
           viewport={{ once: true }}
-          className="bg-purple-500 h-3 rounded-full"
+          className="bg-white h-3 rounded-full"
         />
       </div>
     </div>
