@@ -21,7 +21,7 @@ export default function ProjectCard({ title, imageSrc, href = "#" }) {
       ">
         {/* Image Wrapper */}
         <div className="w-full h-[200px] rounded-t-3xl rounded-b-lg overflow-hidden border border-white/20">
-          {/* Note: The image component must be configured for remote sources if imageSrc is external */}
+          
           <Image
             src={imageSrc}
             alt={title}

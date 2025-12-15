@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import SkillBar from "./Skillbar"; 
-import { Briefcase, Code, User } from 'lucide-react'; // Example icons
+import { Briefcase, Code, User } from 'lucide-react'; 
 
 export default function About() {
   return (
@@ -18,7 +18,7 @@ export default function About() {
         <div className="flex-shrink-0">
           <img 
             className="rounded-full object-cover w-32 h-32 md:w-48 md:h-48 border-4 border-blue-500/50 shadow-lg"
-            src="headshot-web.png" // Ensure this image path is correct
+            src="headshot-web.png" 
             alt="Cody McLeod Headshot"
             width={192}
             height={192}
@@ -32,10 +32,10 @@ export default function About() {
             About Me
           </h2>
           <p className="mb-4 text-gray-300 leading-relaxed">
-            Hello! My name is **Cody McLeod**, known online as "zuuw." I'm a 23-year-old web developer. My journey began in the summer of 2024, where I quickly transitioned from an electrical apprentice—a background that instilled discipline and systematic problem-solving—to a passion for creative web development.
+            Hello! My name is Cody McLeod, known online as "zuuw." I'm a 23-year-old web developer. My journey began in the summer of 2024, where I quickly transitioned from an electrical apprentice, a background that instilled discipline and systematic problem-solving, to a passion for creative web development.
           </p>
           <p className="mb-6 text-gray-300 leading-relaxed">
-            I focus on **front-end development** with modern tools like Next.js, Tailwind CSS, and TypeScript, blending aesthetic design with robust functionality. I am always keen to tackle new challenges and expand my full-stack capabilities.
+            I focus on front-end development with modern tools like Next.js, Tailwind CSS, and TypeScript, blending aesthetic design with robust functionality. I am always keen to tackle new challenges and expand my full-stack capabilities.
           </p>
           
           <h3 className="text-2xl font-semibold text-white mt-6 mb-3">Interests</h3>

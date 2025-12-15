@@ -5,7 +5,7 @@ import React from 'react';
 
 function ZuuwHeader() {
   return (
-    // Added relative positioning and a subtle gradient for visual focus
+    
     <div className="relative isolate items-center text-center p-6 sm:p-10">
       {/* Subtle Blue/Purple Glow Effect */}
       <div 
