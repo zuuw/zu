@@ -1,61 +1,68 @@
 "use client";
 
 import { motion } from "framer-motion";
-import SkillBar from "./Skillbar";
-import Tilt from "react-parallax-tilt";
-
+import SkillBar from "./Skillbar"; 
+import { Briefcase, Code, User } from 'lucide-react'; // Example icons
 
 export default function About() {
   return (
-    <section
-      id="about"
-      className="h-screen grid grid-cols-1 mt-[150px] xl:grid-cols-2 items-center px-6 md:px-20"
-    >
-      {/* About Card */}
+    <div className="grid grid-cols-1 xl:grid-cols-3 gap-12 items-center w-full">
+      {/* About Card (Col 1 & 2) */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-        className="bg-white/10 backdrop-blur rounded-2xl shadow-xl p-6 flex flex-col xl:flex-row items-center gap-6"
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="xl:col-span-2 bg-gray-900/40 border border-white/10 rounded-3xl shadow-2xl p-8 flex flex-col md:flex-row items-start gap-8 backdrop-blur-sm"
       >
+        <div className="flex-shrink-0">
+          <img 
+            className="rounded-full object-cover w-32 h-32 md:w-48 md:h-48 border-4 border-blue-500/50 shadow-lg"
+            src="headshot-web.png" // Ensure this image path is correct
+            alt="Cody McLeod Headshot"
+            width={192}
+            height={192}
+          />
+        </div>
 
-        <img className="bg-white/10 rounded-2xl"
-                  src="headshot-web.png"
-                  alt="Diff"
-                  width={200}
-                  height={200}
-                />
-
-      <div className=" hidden w-28 h-28 rounded-full bg-gray-300 xl:block"></div>
         {/* About text */}
         <div>
-          <h2 id="aboutme" className="text-white text-3xl font-bold mb-2">About Me</h2>
-          <p className=" mb-3">
-           Hello! My name is Cody McLeod, though most people online know me as “zuuw.” I’m a 23-year-old web developer who began coding in the summer of 2024 and quickly fell in love with the creative and problem-solving side of it. Before diving into the world of code, I worked as an electrical apprentice, gaining hands-on experience in both commercial and industrial environments. That background taught me discipline, attention to detail, and how to think through complex systems—skills I now apply to every project I build. Today, I’m focused on expanding my skills in front-end development, exploring modern tools like Next.js and Tailwind CSS, and creating projects that blend design with functionality.
+          <h2 className="text-4xl font-extrabold text-white mb-4 flex items-center gap-3">
+            <User className="w-8 h-8 text-blue-400" />
+            About Me
+          </h2>
+          <p className="mb-4 text-gray-300 leading-relaxed">
+            Hello! My name is **Cody McLeod**, known online as "zuuw." I'm a 23-year-old web developer. My journey began in the summer of 2024, where I quickly transitioned from an electrical apprentice—a background that instilled discipline and systematic problem-solving—to a passion for creative web development.
           </p>
-          <ul className=" hidden list-disc list-insid lg:block">
-            <li>Gym </li>
-            <li>Gaming</li>
-            <li>Movies</li>
+          <p className="mb-6 text-gray-300 leading-relaxed">
+            I focus on **front-end development** with modern tools like Next.js, Tailwind CSS, and TypeScript, blending aesthetic design with robust functionality. I am always keen to tackle new challenges and expand my full-stack capabilities.
+          </p>
+          
+          <h3 className="text-2xl font-semibold text-white mt-6 mb-3">Interests</h3>
+          <ul className="flex flex-wrap gap-x-6 gap-y-2 text-gray-400">
+            <li className="flex items-center gap-2"><Briefcase className="w-4 h-4 text-blue-500" /> Discipline (from trades)</li>
+            <li className="flex items-center gap-2"><Code className="w-4 h-4 text-blue-500" /> Building & Tinkering</li>
+            <li className="flex items-center gap-2">🏋️ Gym</li>
+            <li className="flex items-center gap-2">🎮 Gaming</li>
           </ul>
         </div>
       </motion.div>
-      {/* Skills */}
+      
+      {/* Skills (Col 3) */}
       <motion.div
         initial={{ opacity: 0, x: 50 }}
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-        style={{ padding: 30 }}
-        className="hidden mt-10 xl:block md:mt-0 space-y-6"
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="xl:col-span-1 bg-gray-900/40 border border-white/10 rounded-3xl shadow-2xl p-8 space-y-6 backdrop-blur-sm"
       >
-        <SkillBar skill="Vanilla (HTML/CSS/JAVASCRIPT)" level={90} />
-        <SkillBar skill="Next.js" level={60} />
-        <SkillBar skill="TailwindCSS" level={85} />
-        <SkillBar skill="TypeScript" level={30} />
-        <SkillBar skill="Webflow" level={70} />
+        <h2 className="text-3xl font-bold text-white mb-6">Core Skills</h2>
+        <SkillBar skill="Vanilla (HTML/CSS/JS)" level={90} color="blue" />
+        <SkillBar skill="Next.js / React" level={65} color="cyan" />
+        <SkillBar skill="Tailwind CSS" level={85} color="green" />
+        <SkillBar skill="TypeScript" level={30} color="orange" />
+        <SkillBar skill="Webflow" level={70} color="red" />
       </motion.div>
-    </section>
+    </div>
   );
 }

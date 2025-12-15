@@ -1,53 +1,64 @@
+'use client';
+
 import React from "react";
+import { Send, Mail, User } from 'lucide-react';
 
 function ContactForm() {
   return (
-    <div className="h-screen flex flex-row items-center justify-evenly px-4 md:px-12 bg-transparent">
-      {/* Left Side (Form) */}
-      <form className="flex flex-col items-start gap-5 p-10 rounded-3xl bg-white/10 bg-opacity-60 w-[400px] sm:w-[500px] md:w-[600px]">
+    <div className="flex flex-col items-center justify-center min-h-screen px-4 md:px-12 w-full">
+      
+      <form 
+        className="flex flex-col gap-6 p-10 sm:p-12 rounded-3xl bg-gray-900/70 border border-white/10 shadow-2xl w-full max-w-lg md:max-w-xl backdrop-blur-sm"
+        // Replace with your actual form submission handler
+        onSubmit={(e) => { e.preventDefault(); alert("Form submitted (Demo)"); }}
+      >
         {/* Title */}
         <div>
-          <h2 className="text-white text-4xl font-semibold mb-1">Get in touch</h2>
-          <hr className="w-[120px] h-[5px] bg-white rounded-lg mb-5 border-none" />
+          <h2 className="text-white text-4xl font-extrabold mb-2">Let's Connect</h2>
+          <p className="text-gray-400">Have a project idea or just want to chat? Send me a message!</p>
         </div>
 
         {/* Name Input */}
-        <input
-          type="text"
-          name="name"
-          placeholder="Your name"
-          required
-          className="w-full h-[50px] px-6 font-medium rounded-full text-black bg-white bg-opacity-60 placeholder:text-[#171717] focus:outline-none focus:border-2 focus:border-[#]"
-        />
+        <div className="relative">
+            <User className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500"/>
+            <input
+                type="text"
+                name="name"
+                placeholder="Your name"
+                required
+                className="w-full h-[50px] pl-12 pr-6 font-medium rounded-xl text-white bg-gray-800 border border-gray-700 placeholder:text-gray-500 focus:outline-none focus:border-blue-500 transition"
+            />
+        </div>
 
         {/* Email Input */}
-        <input
-          type="email"
-          name="email"
-          placeholder="Your email"
-          required
-          className="w-full h-[50px] px-6 font-medium rounded-full text-black bg-white bg-opacity-60 placeholder:text-[#171717] focus:outline-none focus:border-2 focus:border-[#]"
-        />
+        <div className="relative">
+            <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500"/>
+            <input
+                type="email"
+                name="email"
+                placeholder="Your email"
+                required
+                className="w-full h-[50px] pl-12 pr-6 font-medium rounded-xl text-white bg-gray-800 border border-gray-700 placeholder:text-gray-500 focus:outline-none focus:border-blue-500 transition"
+            />
+        </div>
 
         {/* Message Textarea */}
         <textarea
           name="message"
           placeholder="Your message"
           required
-          className="w-full h-[140px] px-6 pt-4 font-medium rounded-2xl text-black bg-white bg-opacity-60 placeholder:text-[#171717] focus:outline-none focus:border-2 focus:border-[#ffffff]"
+          rows={5}
+          className="w-full px-6 pt-4 pb-4 font-medium rounded-xl text-white bg-gray-800 border border-gray-700 placeholder:text-gray-500 focus:outline-none focus:border-blue-500 transition resize-none"
         ></textarea>
 
         {/* Submit Button */}
         <button
           type="submit"
-          className="flex items-center gap-3 text-black text-base font-medium py-3 px-7 rounded-full bg-gradient-to-l bg-white opacity-40 hover:opacity-100 transition duration-300"
+          className="flex items-center justify-center gap-3 text-white text-lg font-bold py-3 px-7 rounded-xl bg-blue-600 hover:bg-blue-700 transition duration-300 shadow-lg shadow-blue-500/50 transform hover:scale-[1.01]"
         >
-          Submit!
+          Send Message <Send className="w-5 h-5"/>
         </button>
       </form>
-
-      {/* Right Side Image (hidden on small screens) */}
-
     </div>
   );
 }

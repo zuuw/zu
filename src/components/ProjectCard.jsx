@@ -1,56 +1,44 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-
-// A reusable ProjectCard component
-// - Fixed size so images of different dimensions won't stretch the layout
-// - Clickable to navigate to a project page
-// - Style matches your soft-glass, rounded, semi-transparent design
+import { ArrowUpRight } from 'lucide-react';
 
 export default function ProjectCard({ title, imageSrc, href = "#" }) {
   return (
-    <Link href={href} className="group">
-      <div className="w-[260px] h-[320px] rounded-3xl bg-white/10 backdrop-blur-md shadow-lg p-5 flex flex-col items-center justify-between transition-transform duration-300 group-hover:scale-105">
+    <Link href={href} target="_blank" rel="noopener noreferrer" className="flex-shrink-0 group">
+      <div className="
+        w-[280px] h-[350px] 
+        rounded-[3rem] /* Extra large radius for modern look */
+        bg-gray-800/60 
+        border border-white/10 
+        shadow-xl 
+        p-6 
+        flex flex-col items-center justify-between 
+        transition-all duration-500 
+        group-hover:scale-[1.02] 
+        group-hover:bg-gray-800/80
+        group-hover:shadow-blue-500/30
+      ">
         {/* Image Wrapper */}
-        <div className="w-full h-[200px] rounded-2xl overflow-hidden bg-white/20 flex items-center justify-center">
+        <div className="w-full h-[200px] rounded-t-3xl rounded-b-lg overflow-hidden border border-white/20">
+          {/* Note: The image component must be configured for remote sources if imageSrc is external */}
           <Image
             src={imageSrc}
             alt={title}
             width={300}
             height={200}
-            className="object-cover w-full h-full"
+            className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
           />
         </div>
 
-        {/* Title */}
-        <h3 className="text-white text-xl font-semibold text-center mt-3">
-          {title}
-        </h3>
+        {/* Title & Icon */}
+        <div className="flex justify-between items-center w-full mt-4">
+            <h3 className="text-white text-xl font-bold">
+            {title}
+            </h3>
+            <ArrowUpRight className="w-6 h-6 text-blue-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition duration-300"/>
+        </div>
       </div>
     </Link>
   );
 }
-
-/*
-USAGE EXAMPLE IN A LOOP CAROUSEL (e.g., inside a parent component):
-
-const projects = [
-  {
-    title: "Portfolio Website",
-    imageSrc: "/projects/portfolio.png",
-    href: "/projects/portfolio",
-  },
-  {
-    title: "League Trainer Tool",
-    imageSrc: "/projects/league.png",
-    href: "/projects/league",
-  },
-  // Add more projects easily...
-];
-
-<div className="flex gap-6 overflow-x-auto no-scrollbar py-10 px-4">
-  {projects.map((project, idx) => (
-    <ProjectCard key={idx} {...project} />
-  ))}
-</div>
-*/
